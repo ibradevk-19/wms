@@ -110,7 +110,7 @@ class SupplyInvoiceController extends Controller
                 WarehouseItem::create([
                     'warehouse_id' => $request->warehouse_id,
                     'product_id' => $item['product_id'],
-                    'quantity' => $totalQty,
+                    'quantity' => $qty,
                     'last_movement_at' => now(),
                     'location_inside' => null, // يمكنك تعديل الموقع لاحقًا يدويًا
                 ]);
