@@ -164,6 +164,7 @@ class SupplyInvoiceController extends Controller
         } catch (\Throwable $e) {
             DB::rollBack();
             // لا تستخدم dd في الإنتاج
+            dd($e);
             return back()->withInput()->with('error', 'حدث خطأ أثناء حفظ الفاتورة: ' . $e->getMessage());
         }
     }
