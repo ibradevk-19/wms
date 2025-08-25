@@ -150,8 +150,10 @@ class SupplyInvoiceController extends Controller
                 // $balance->increment('quantity', $qty);
                 // $balance->increment('total_weight', $wgt);
                 //supplier-transactions make supplier-transactions
+                $supplier = Supplier::first();
 
                 SupplierTransaction::create([
+                    'supplier_id' => $supplier->id,
                     'type' => 'supply_invoice',
                     'reference' => $request->invoice_number,
                     'amount' => $qty,
