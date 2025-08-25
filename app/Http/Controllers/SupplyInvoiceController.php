@@ -10,6 +10,7 @@ use App\Models\Warehouse;
 use App\Models\Product;
 use App\Models\Unit;
 use App\Models\SupplyInvoiceItem;
+use App\Models\SupplierTransaction;
 use App\Models\WarehouseProductBalance;
 use App\Exports\SupplyInvoiceReportExport;
 use Maatwebsite\Excel\Facades\Excel;
