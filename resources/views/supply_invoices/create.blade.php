@@ -33,7 +33,7 @@
             <select name="truck_id" class="form-control">
                 <option value="">-- اختر الشاحنة --</option>
                 @foreach($trucks as $truck)
-                    <option value="{{ $truck->id }}">{{ $truck->plate_number }}</option>
+                    <option value="{{ $truck->id }}">{{ $truck->plate_number }} . '-' . {{ $truck->driver_name }}</option>
                 @endforeach
             </select>
         </div>
